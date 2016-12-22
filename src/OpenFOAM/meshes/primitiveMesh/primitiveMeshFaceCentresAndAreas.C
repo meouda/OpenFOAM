@@ -77,7 +77,7 @@ void Foam::primitiveMesh::makeFaceCentresAndAreas
     vectorField& fAreas
 ) const
 {
-    const faceList& fs = faces(); // faces return a const reference to faceList
+    const faceList& fs = faces(); // faces return a const reference to faceList. Definition at line 1004 of file polyMesh.C
 
     forAll(fs, facei)
     {
