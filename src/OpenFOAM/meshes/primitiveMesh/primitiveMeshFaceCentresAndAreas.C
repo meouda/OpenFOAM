@@ -37,7 +37,7 @@ Description
 
 void Foam::primitiveMesh::calcFaceCentresAndAreas() const
 {
-    if (debug)
+    if (debug) // Debug flag is set on primitiveMesh.C
     {
         Pout<< "primitiveMesh::calcFaceCentresAndAreas() : "
             << "Calculating face centres and face areas"
@@ -77,7 +77,7 @@ void Foam::primitiveMesh::makeFaceCentresAndAreas
     vectorField& fAreas
 ) const
 {
-    const faceList& fs = faces();
+    const faceList& fs = faces(); // faces return a const reference to faceList
 
     forAll(fs, facei)
     {
